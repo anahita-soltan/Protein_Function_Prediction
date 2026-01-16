@@ -1,7 +1,0 @@
-filename	ns	tau	cov	pr	rc	f	max_cov
-ipr_submission.tsv	biological_process	0.01000	0.71200	0.77799	0.22625	0.35056	0.71200
-ipr_submission.tsv	cellular_component	0.01000	0.45500	0.92121	0.14891	0.25637	0.45500
-ipr_submission.tsv	molecular_function	0.01000	0.91200	0.77046	0.51614	0.61816	0.91200
-naive_submission.tsv	biological_process	0.13000	1.00000	0.32230	0.36877	0.34397	1.00000
-naive_submission.tsv	cellular_component	0.23000	1.00000	0.67110	0.53871	0.59766	1.00000
-naive_submission.tsv	molecular_function	0.23000	1.00000	0.69025	0.33424	0.45039	1.00000
