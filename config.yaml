@@ -1,6 +1,7 @@
 data:
-  train_dir: "/Users/anahitasoltantoyeh/Desktop/Project/biological_data_pfp/train"
-  test_dir: "/Users/anahitasoltantoyeh/Desktop/Project/biological_data_pfp/test"
+  train_dir: "/content/drive/MyDrive/Bio_Data/biological_data_pfp/train"
+  test_dir:  "/content/drive/MyDrive/Bio_Data/biological_data_pfp/test"
+
   out_dir:  "/Users/anahitasoltantoyeh/Desktop/Project/output"
 
 model:
