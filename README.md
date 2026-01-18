@@ -77,40 +77,40 @@ pip install cafaeval
 The project expects the following directory structure (paths configurable):
 
 biological_data_pfp/
-─ train/
-─ train_set.tsv
-─ train_ids.txt
-─ train_embeddings.h5
-─ train_protein2ipr.dat
-─ go-basic.obo
-├─ test/
-─ test_ids.txt
-─ test_embeddings.h5
-─ test_protein2ipr.dat
-─ blast_test_results.tsv
+- train/
+- train_set.tsv
+- train_ids.txt
+- train_embeddings.h5
+- train_protein2ipr.dat
+- go-basic.obo
+- test/
+- test_ids.txt
+- test_embeddings.h5
+- test_protein2ipr.dat
+- blast_test_results.tsv
 
 Update paths in config.yaml accordingly
 
 ## Configuration (config.yaml)
 All paths and hyperparameters are controlled from one file. Key options:
 
-data:
-  train_dir: "/path/to/train"
-  test_dir:  "/path/to/test"
-  out_dir:   "/path/to/output"
-model:
-  subset_n: 20000      # null = use all training proteins
-  val_frac: 0.1        # validation split for CAFA-style evaluation
-  random_state: 42
-  max_iter: 200
-blast:
-  enabled: true
-  evalue_thresh: 0.001
-  topk: 50
-  alpha: 0.2           # final score = alpha*ML + (1-alpha)*BLAST
-predict:
-  topk_per_aspect: 500
-  min_score: 1e-6
+- data:
+-  train_dir: "/path/to/train"
+-  test_dir:  "/path/to/test"
+-  out_dir:   "/path/to/output"
+- model:
+-  subset_n: 20000      # null = use all training proteins
+-  val_frac: 0.1        # validation split for CAFA-style evaluation
+-  random_state: 42
+-  max_iter: 200
+- blast:
+-  enabled: true
+-  evalue_thresh: 0.001
+-  topk: 50
+-  alpha: 0.2           # final score = alpha*ML + (1-alpha)*BLAST
+- predict:
+-  topk_per_aspect: 500
+-  min_score: 1e-6
 
 ## Training the models
 Trains three independent OvR logistic regression models (MF, BP, CC).
