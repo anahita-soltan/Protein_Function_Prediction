@@ -14,47 +14,38 @@ Predictions are evaluated using the CAFA evaluator, and performance is compared 
 
 **Core scripts:**
 
-train.py — Trains one-vs-rest logistic regression models for MF, BP, and CC
-
-predict.py — Generates test-set predictions and final submission file
-
-cafa_val.py — Hold-out validation and CAFA-style evaluation
+- train.py — Trains one-vs-rest logistic regression models for MF, BP, and CC
+- predict.py — Generates test-set predictions and final submission file
+- cafa_val.py — Hold-out validation and CAFA-style evaluation
 
 **Configuration:**
 
-config.yaml — All paths, hyperparameters, random seeds
+- config.yaml — All paths, hyperparameters, random seeds
 
 
 **Utilities** (utils/)
 
-io.py — Data loading and saving
-
-labels.py — GO label construction and binarization
-
-blast.py — BLAST-based score integration
-
-submit.py — Submission formatting and constraint handling
+- io.py — Data loading and saving
+- labels.py — GO label construction and binarization
+- blast.py — BLAST-based score integration
+- submit.py — Submission formatting and constraint handling
 
 
 **Outputs** (output/)
 
-models/ — Trained models (.joblib)
-
-preds/ — Test-set predictions
-
-cafa_val/ — Validation predictions and ground truth
-
-submission.tsv — Final submission file
+- models/ — Trained models (.joblib)
+- preds/ — Test-set predictions
+- cafa_val/ — Validation predictions and ground truth
+- submission.tsv — Final submission file
 
 
 **Notebooks**
 
-notebooks/ — Colab and analysis notebooks
-
+- notebooks/ — Colab and analysis notebooks
 
 **Metadata**
 
-requirements.txt
+- requirements.txt
 
 README.md
 
