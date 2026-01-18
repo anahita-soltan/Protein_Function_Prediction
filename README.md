@@ -117,36 +117,43 @@ Trains three independent OvR logistic regression models (MF, BP, CC).
 **python train.py --config config.yaml**
 
 ### Outputs:
-output/models/
+- output/models/
 - model_mf.joblib
 - model_bp.joblib
-─ model_cc.joblib**
+- model_cc.joblib
+
 Training is fully reproducible given the same config and random seed.
 
 ## Predicting on the test set
+
 Generates the final submission file:
+
 **python predict.py --config config.yaml**
 
-Output: **output/submission.tsv**
-Format (CAFA-compliant):
-Protein_ID   GO_term     score
-P12345       GO:0008150  0.742
-P12345       GO:0003674  0.531
-...
+- Output: **output/submission.tsv**
+- Format (CAFA-compliant):
+- Protein_ID   GO_term     score
+- P12345       GO:0008150  0.742
+- P12345       GO:0003674  0.531
+- ...
+
 Each protein is capped at 1500 GO terms total across aspects.
 
 ## Internal validation (CAFA-style)
+
 To evaluate performance on a held-out subset of the training data:
 **python cafa_val.py**
 
 This will:
 Split training data into train/validation
+
 Generate CAFA-formatted predictions
+
 Save:
-output/cafa_val/
-├── ground_truth_val.tsv
-├── ours_val.tsv
-└── preds/
+- output/cafa_val/
+- ground_truth_val.tsv
+- ours_val.tsv
+- preds/
 
 ### Run CAFA evaluation
 cafaeval \
