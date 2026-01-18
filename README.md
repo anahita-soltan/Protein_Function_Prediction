@@ -10,28 +10,32 @@ The model predicts GO terms independently for the three sub-ontologies:
 Predictions are evaluated using the CAFA evaluator, and performance is compared against Naive and InterPro baselines.
 
 ## Repository structure
-Protein_Function_Prediction/
-│
-├── train.py            # Train OvR logistic regression models (MF / BP / CC)
-├── predict.py          # Generate test-set predictions + submission file
-├── cafa_val.py         # Hold-out validation + CAFA-style evaluation
-├── config.yaml         # Paths, hyperparameters, random seeds
-│
-├── utils/              # Core helper modules
-│   ├── io.py           # Data loading / saving
-│   ├── labels.py       # GO label processing
-│   ├── blast.py        # BLAST score integration
-│   └── submit.py       # Submission formatting & constraints
-│
-├── output/
-│   ├── models/         # Trained models (.joblib)
-│   ├── preds/          # Test-set predictions
-│   ├── cafa_val/       # Validation predictions + ground truth
-│   └── submission.tsv  # Final submission file
-│
-├── notebooks/          # Colab / analysis notebooks
-├── requirements.txt
-└── README.md
+
+**Core scripts:**
+train.py — Trains one-vs-rest logistic regression models for MF, BP, and CC
+predict.py — Generates test-set predictions and final submission file
+cafa_val.py — Hold-out validation and CAFA-style evaluation
+
+**Configuration:**
+config.yaml — All paths, hyperparameters, random seeds
+
+**Utilities** (utils/)
+io.py — Data loading and saving
+labels.py — GO label construction and binarization
+blast.py — BLAST-based score integration
+submit.py — Submission formatting and constraint handling
+
+**Outputs** (output/)
+models/ — Trained models (.joblib)
+preds/ — Test-set predictions
+cafa_val/ — Validation predictions and ground truth
+submission.tsv — Final submission file
+
+**Notebooks**
+notebooks/ — Colab and analysis notebooks
+Metadata
+requirements.txt
+README.md
 
 
 
