@@ -132,10 +132,14 @@ Generates the final submission file:
 
 - Output: **output/submission.tsv**
 - Format (CAFA-compliant):
-- Protein_ID   GO_term     score
-- P12345       GO:0008150  0.742
-- P12345       GO:0003674  0.531
-- ...
+- 
+Protein_ID   GO_term     score
+
+P12345       GO:0008150  0.742
+
+P12345       GO:0003674  0.531
+
+...
 
 Each protein is capped at 1500 GO terms total across aspects.
 
@@ -163,9 +167,9 @@ cafaeval \
   -out_dir output/cafa_val_results
 
 Produces:
-**evaluation_all.tsv
-evaluation_best_f.tsv
-Precision-recall curves and figures**
+- evaluation_all.tsv
+- evaluation_best_f.tsv
+- Precision-recall curves and figures**
 
 
 
