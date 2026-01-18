@@ -77,17 +77,17 @@ pip install cafaeval
 The project expects the following directory structure (paths configurable):
 
 biological_data_pfp/
-├── train/
-│   ├── train_set.tsv
-│   ├── train_ids.txt
-│   ├── train_embeddings.h5
-│   ├── train_protein2ipr.dat
-│   └── go-basic.obo
-├── test/
-│   ├── test_ids.txt
-│   ├── test_embeddings.h5
-│   ├── test_protein2ipr.dat
-│   └── blast_test_results.tsv
+─ train/
+─ train_set.tsv
+─ train_ids.txt
+─ train_embeddings.h5
+─ train_protein2ipr.dat
+─ go-basic.obo
+├─ test/
+─ test_ids.txt
+─ test_embeddings.h5
+─ test_protein2ipr.dat
+─ blast_test_results.tsv
 
 Update paths in config.yaml accordingly
 
@@ -118,9 +118,9 @@ Trains three independent OvR logistic regression models (MF, BP, CC).
 
 ### Outputs:
 output/models/
-**├── model_mf.joblib
-├── model_bp.joblib
-└── model_cc.joblib**
+- model_mf.joblib
+- model_bp.joblib
+─ model_cc.joblib**
 Training is fully reproducible given the same config and random seed.
 
 ## Predicting on the test set
