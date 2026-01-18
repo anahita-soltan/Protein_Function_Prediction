@@ -11,18 +11,23 @@ Predictions are evaluated using the CAFA evaluator, and performance is compared 
 
 ## Repository structure
 .
-├── train.py                # Train OvR logistic regression models
-├── cafa_val.py             # Internal validation + CAFA-style evaluation
-├── predict.py              # Predict GO terms for test proteins
-├── config.yaml             # All paths and hyperparameters
-├── utils/                  # Helper modules (IO, labels, BLAST, submission)
+├── train.py            # Train OvR logistic regression models (MF/BP/CC)
+├── predict.py          # Generate test-set predictions and submission file
+├── cafa_val.py         # Hold-out validation + CAFA-style evaluation
+├── config.yaml         # Paths and hyperparameters
+├── utils/              # IO, label handling, BLAST integration, submission utils
+│   ├── io.py
+│   ├── labels.py
+│   ├── blast.py
+│   └── submit.py
 ├── output/
-│   ├── models/             # Trained models (joblib)
-│   ├── cafa_val/            # Validation predictions + ground truth
-│   ├── preds/              # Test-set predictions
-│   └── submission.tsv      # Final submission file
-├── notebooks/              # Colab / analysis notebooks
+│   ├── models/         # Trained models (.joblib)
+│   ├── preds/          # Test-set predictions
+│   ├── submission.tsv  # Final submission file
+│   └── cafa_val/       # Validation predictions + ground truth
+├── notebooks/          # Colab / analysis notebooks
 └── README.md
+
 
 ## Reproducibility
 All randomness controlled via config.yaml
